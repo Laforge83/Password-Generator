@@ -6,15 +6,15 @@ var special =  ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ','
 var generateBtn = document.getElementById("generate") 
 
 function passwordOptions() {
-  var passwordLenght=prompt("How long of a password")
+  var passwordLenght=prompt("How many characters, min. 8, max. 128")
   console.log(passwordLenght)
-  var userUpper=confirm("Uppercase")
+  var userUpper=confirm("Uppercase Characters")
   console.log(userUpper)
-  var userLower=confirm("Lowercase")
+  var userLower=confirm("Lowercase Characters")
   console.log(userLower)
-  var userSpecial=confirm("Special")
+  var userSpecial=confirm("Special Characters")
   console.log(userSpecial)
-  var userNumbers=confirm("Numbers")
+  var userNumbers=confirm("Number Characters")
   console.log(userNumbers)
   var options={
     passwordLenght,userLower,userUpper,userSpecial,userNumbers
@@ -28,24 +28,25 @@ return array[randomIndex]
 }
 
 function generatePassword() {
-  var apple=passwordOptions()
-  console.log(apple)
+  var pwdOptions=passwordOptions()
+  console.log(pwdOptions)
   var userPassword = []
   var concact=[]
-  if (apple.userUpper) {
+  if (pwdOptions.userUpper) {
     userPassword.push(randomChoice (uppercase))
     concact=concact.concat(uppercase)
-
   }
-  if (apple.userUpper) {
-    userPassword.push(randomChoice (uppercase))
-    concact=concact.concat(uppercase)
-
+  if (pwdOptions.userLower) {
+    userPassword.push(randomChoice (lowercase))
+    concact=concact.concat(lowercase)
   }
-  if (apple.userUpper) {
-    userPassword.push(randomChoice (uppercase))
-    concact=concact.concat(uppercase)
-
+    if (pwdOptions.userSpecial) {
+    userPassword.push(randomChoice (special))
+    concact=concact.concat(special)
+  }
+  if (pwdOptions.userNumbers) {
+    userPassword.push(randomChoice (numbers))
+    concact=concact.concat(numbers)
   }
 }
 generatePassword()
