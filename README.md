@@ -16,7 +16,7 @@ JavaScript
 Created by Daniel Laforge with the help of Irina Kudosova (tutor).
 
 ## Screenshot
-
+![]()
 ## Website
 
 
