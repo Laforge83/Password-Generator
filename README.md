@@ -11,7 +11,7 @@ JavaScript
 ## Credits
 Created by Daniel Laforge with the help of Irina Kudosova (tutor).
 ## Screenshot
-<img src="assets/Screenshot_Password_Generator.png" alt="Password Generator screenshot">
+<img src="Assets/Screenshot_Password_Generator.png" alt="Password Generator screenshot">
 
 ## Website
 https://laforge83.github.io/Password-Generator/
