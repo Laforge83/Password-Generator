@@ -27,13 +27,6 @@ function randomChoice(arr) {
   return arr[randomIndex];
 }
 
-
-/* function randomChoice(array) {
-  var randomIndex = Math.floor(Math.random() * array.lenght)
-  console.log(randomIndex, array[randomIndex])
-  return array[randomIndex]
-} */
-
 function generatePassword() {
   var pwdOptions = passwordOptions()
   console.log(typeof pwdOptions.passwordLenght
@@ -61,6 +54,7 @@ function generatePassword() {
 
   console.log(concact)
   console.log(pwdOptions.passwordLenght)
+
   for (let i = 0; i < pwdOptions.passwordLenght; i++) {
     finalPassword.push(randomChoice(concact))
 
@@ -81,10 +75,4 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-// pseudocode we need a series of prompt
-
